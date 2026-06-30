@@ -1,16 +1,16 @@
-# UIsheji Reference Replica
+# UIsheji 参考界面复刻
 
-This repository contains a high-fidelity single-page UI replica based on the provided reference screenshots. The implementation is intentionally narrow: static front-end, local assets committed into the repo, and no backend or CMS.
+这个仓库用于根据参考截图实现高保真单页 UI 复刻。实现范围保持克制：静态前端、本地图片资源提交到仓库，不包含后端、CMS 或登录系统。
 
-## Stack
+## 技术栈
 
 - Vite
 - React
 - TypeScript
-- Native CSS with design tokens
-- Local image assets committed under `public/assets`
+- 使用设计 token 的原生 CSS
+- 本地图片资源位于 `public/assets`
 
-## Commands
+## 常用命令
 
 ```powershell
 npm install
@@ -19,13 +19,13 @@ npm run build
 npm run preview -- --host 127.0.0.1 --port 4173
 ```
 
-## Deployment
+## 部署
 
-For Vercel, use:
+Vercel 部署配置：
 
-- Build Command: `npm run build`
-- Output Directory: `dist`
+- 构建命令：`npm run build`
+- 输出目录：`dist`
 
-## Design Resources
+## 设计资源
 
-- Web UI design resource pack: `docs/06-ui-design-resource-pack.md`
+- 网页 UI 设计资源手册：`docs/06-ui-design-resource-pack.md`

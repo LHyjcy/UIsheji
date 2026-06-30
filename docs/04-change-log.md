@@ -11,4 +11,4 @@
 - Completed the page from the UI wireframe: expanded the collage to 16 cards, added bottom labels, and added the remaining black/gray creative sections while keeping the same Vite React TypeScript stack.
 - Continued polish: removed non-interactive images from the tab order, hid decorative blocks from assistive tech, capped mobile hero height, normalized letter spacing, and added intrinsic dimensions for repeated asset images.
 - Added hero image preload and theme color metadata to improve first paint consistency.
-- Added a standalone web UI design resource pack covering agent skills, plugins, methods, AI design tools, inspiration sites, and a reusable production workflow.
+- 新增独立网页 UI 设计资源手册，覆盖 agent skills、插件、方法论、AI 设计工具、案例参考站和可复用生产流程。
