@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { galleryItems } from '../data/pageContent';
 
 export function GalleryCollage() {
@@ -7,7 +8,7 @@ export function GalleryCollage() {
       <div className="gallery-collage__label gallery-collage__label--top-right">DESIGNER</div>
 
       <div className="gallery-collage__stage">
-        {galleryItems.map((item) => (
+        {galleryItems.map((item, index) => (
           <img
             key={item.id}
             className="gallery-card"
@@ -17,13 +18,15 @@ export function GalleryCollage() {
             height={item.naturalHeight}
             loading="lazy"
             decoding="async"
+            tabIndex={0}
             style={{
               left: `${item.left}%`,
               top: `${item.top}%`,
               width: `${item.width}%`,
               zIndex: item.z,
-              transform: `rotate(${item.rotate}deg)`,
-            }}
+              '--card-rotate': `${item.rotate}deg`,
+              '--card-delay': `${index * 70}ms`,
+            } as CSSProperties}
           />
         ))}
       </div>
