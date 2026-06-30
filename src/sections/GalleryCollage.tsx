@@ -13,6 +13,10 @@ export function GalleryCollage() {
             className="gallery-card"
             src={item.src}
             alt={item.alt}
+            width={item.naturalWidth}
+            height={item.naturalHeight}
+            loading="lazy"
+            decoding="async"
             style={{
               left: `${item.left}%`,
               top: `${item.top}%`,

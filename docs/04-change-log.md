@@ -6,3 +6,4 @@
 - Selected Vite, React, TypeScript, native CSS tokens, and local deployable assets.
 - Documented the reference audit, implementation plan, and visual QA checklist.
 - Removed the standalone pill entry and the content below it, leaving the hero and upper gallery.
+- Applied a preserve-mode visual polish pass: fixed the hidden Chinese page title, added image dimensions/loading hints, and removed deleted-section style leftovers without changing layout or framework.

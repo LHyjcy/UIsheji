@@ -5,6 +5,10 @@ export function HeroDark() {
         className="hero-dark__image"
         src="/assets/generated/hero-closeup.webp"
         alt="Dark hero composition with red-haired character and tutorial title"
+        width={1440}
+        height={805}
+        decoding="async"
+        fetchPriority="high"
       />
       <h1 className="visually-hidden">教程 个人网站制作 B7 全流程</h1>
     </section>
