@@ -6,6 +6,8 @@ export function GalleryCollage() {
     <section className="gallery-collage" aria-label="Collection gallery">
       <div className="gallery-collage__label gallery-collage__label--top-left">LQB_2026</div>
       <div className="gallery-collage__label gallery-collage__label--top-right">DESIGNER</div>
+      <div className="gallery-collage__label gallery-collage__label--bottom-left">EXCLUSIVE CONTENT</div>
+      <div className="gallery-collage__label gallery-collage__label--bottom-right">COLLECTION</div>
 
       <div className="gallery-collage__stage">
         {galleryItems.map((item, index) => (

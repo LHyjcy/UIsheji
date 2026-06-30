@@ -2,11 +2,11 @@
 
 ## Goal
 
-Add a light interaction layer to the existing reference replica while preserving the current page layout, Vite React TypeScript stack, static assets, and section order.
+Add a light interaction layer to the reference replica while preserving the Vite React TypeScript stack and static assets.
 
 ## Chosen Approach
 
-Use native CSS motion only. The page keeps the existing hero image and gallery collage, then adds:
+Use native CSS motion only. The page keeps the existing hero image, gallery collage, and completed wireframe sections, then adds:
 
 - A subtle hero image settle animation on first paint.
 - Staggered gallery card reveal timing.
@@ -19,7 +19,7 @@ Use native CSS motion only. The page keeps the existing hero image and gallery c
 - No new framework or animation dependency.
 - No route, section, content, or image replacement.
 - No visible instructional text.
-- No layout restructuring.
+- No interaction pattern that changes section order.
 
 ## Verification
 

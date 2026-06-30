@@ -8,7 +8,7 @@ This repository contains a high-fidelity single-page UI replica based on the pro
 - React
 - TypeScript
 - Native CSS with design tokens
-- Phosphor Icons for the camera glyph only
+- Local image assets committed under `public/assets`
 
 ## Commands
 

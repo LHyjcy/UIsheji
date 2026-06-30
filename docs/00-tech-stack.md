@@ -10,7 +10,7 @@ Build a deployable single-page UI replica for the `LHyjcy/UIsheji` repository. T
 - **React** for splitting the page into clear sections.
 - **TypeScript** for typed content arrays and safer refactors.
 - **Native CSS** with `src/styles/tokens.css` for exact positioning, colors, spacing, and responsive behavior.
-- **Phosphor Icons** for the camera icon in the pill control.
+- **Local WebP assets** in `public/assets/generated` for the hero, gallery, and repeated visual cards.
 
 ## Deliberately Excluded
 

@@ -22,9 +22,19 @@ The reference is an experimental designer portfolio landing page. The visual lan
 
 2. White gallery collage based on reference image 2:
    - Large white field.
-   - 16 mixed-size cards positioned around a center pill button.
+   - 16 mixed-size cards positioned as an asymmetric collage.
    - Corner labels: `LQB_2026`, `DESIGNER`, `EXCLUSIVE CONTENT`, `COLLECTION`.
+
+3. Wireframe completion sections based on reference image 1:
+   - Black creative AI orbit section.
+   - Gray divider band.
+   - Recent works section with text and bottom bars.
+   - Floating manifesto section with scattered blocks.
+   - Black archive grid.
+   - Gray creative design split section.
+   - Black creative AI card wall.
+   - Gray closing panel.
 
 ## Wireframe Notes
 
-Reference image 1 confirms the structure: hard section cuts, flat black/gray blocks, a central creative AI card motif, and asymmetric placeholder clusters. The final implementation uses the same spirit but now keeps only the hero and upper gallery content.
+Reference image 1 confirms the structure: hard section cuts, flat black/gray blocks, a central creative AI card motif, and asymmetric placeholder clusters. The full implementation keeps the cinematic hero and image collage from the final reference, then completes the rest of the page with the wireframe's black/gray section rhythm.
