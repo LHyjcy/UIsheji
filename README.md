@@ -25,3 +25,7 @@ For Vercel, use:
 
 - Build Command: `npm run build`
 - Output Directory: `dist`
+
+## Design Resources
+
+- Web UI design resource pack: `docs/06-ui-design-resource-pack.md`
