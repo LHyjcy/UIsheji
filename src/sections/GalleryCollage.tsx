@@ -20,7 +20,6 @@ export function GalleryCollage() {
             height={item.naturalHeight}
             loading="lazy"
             decoding="async"
-            tabIndex={0}
             style={{
               left: `${item.left}%`,
               top: `${item.top}%`,

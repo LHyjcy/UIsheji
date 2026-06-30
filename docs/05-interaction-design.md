@@ -11,7 +11,7 @@ Use native CSS motion only. The page keeps the existing hero image, gallery coll
 - A subtle hero image settle animation on first paint.
 - Staggered gallery card reveal timing.
 - Desktop hover lift with stronger contrast and shadow.
-- Keyboard focus feedback on gallery cards.
+- Static gallery images stay out of the keyboard tab order.
 - Reduced-motion fallback through the existing media query.
 
 ## Boundaries

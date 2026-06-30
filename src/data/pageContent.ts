@@ -38,6 +38,34 @@ export type MediaCard = {
   title: string;
 };
 
+export type ImageSize = {
+  naturalWidth: number;
+  naturalHeight: number;
+};
+
+export const generatedImageSizes: Record<string, ImageSize> = {
+  '/assets/generated/gallery-01.webp': { naturalWidth: 236, naturalHeight: 172 },
+  '/assets/generated/gallery-02.webp': { naturalWidth: 203, naturalHeight: 202 },
+  '/assets/generated/gallery-03.webp': { naturalWidth: 211, naturalHeight: 200 },
+  '/assets/generated/gallery-04.webp': { naturalWidth: 183, naturalHeight: 216 },
+  '/assets/generated/gallery-05.webp': { naturalWidth: 205, naturalHeight: 249 },
+  '/assets/generated/gallery-06.webp': { naturalWidth: 223, naturalHeight: 201 },
+  '/assets/generated/gallery-07.webp': { naturalWidth: 212, naturalHeight: 222 },
+  '/assets/generated/gallery-08.webp': { naturalWidth: 203, naturalHeight: 204 },
+  '/assets/generated/gallery-09.webp': { naturalWidth: 264, naturalHeight: 248 },
+  '/assets/generated/gallery-10.webp': { naturalWidth: 210, naturalHeight: 178 },
+  '/assets/generated/gallery-11.webp': { naturalWidth: 240, naturalHeight: 208 },
+  '/assets/generated/gallery-12.webp': { naturalWidth: 209, naturalHeight: 187 },
+  '/assets/generated/gallery-13.webp': { naturalWidth: 210, naturalHeight: 303 },
+  '/assets/generated/gallery-14.webp': { naturalWidth: 236, naturalHeight: 148 },
+  '/assets/generated/gallery-15.webp': { naturalWidth: 205, naturalHeight: 214 },
+  '/assets/generated/gallery-16.webp': { naturalWidth: 203, naturalHeight: 200 },
+};
+
+export function getGeneratedImageSize(src: string): ImageSize {
+  return generatedImageSizes[src] ?? { naturalWidth: 1, naturalHeight: 1 };
+}
+
 export const galleryItems: GalleryItem[] = [
   { id: 'new-image', src: '/assets/generated/gallery-01.webp', alt: 'Green future poster', left: 2, top: 39, width: 17, naturalWidth: 236, naturalHeight: 172, rotate: 0, z: 2 },
   { id: 'pink-screen', src: '/assets/generated/gallery-02.webp', alt: 'Pink interface card', left: 12, top: 29, width: 15, naturalWidth: 203, naturalHeight: 202, rotate: 0, z: 3 },

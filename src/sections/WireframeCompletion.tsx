@@ -3,10 +3,33 @@ import {
   archiveBlocks,
   creativeCards,
   floatingBlocks,
+  getGeneratedImageSize,
   orbitBlocks,
   recentBars,
   splitBlocks,
 } from '../data/pageContent';
+
+type AssetImageProps = {
+  src: string;
+  alt: string;
+  style?: CSSProperties;
+};
+
+function AssetImage({ src, alt, style }: AssetImageProps) {
+  const size = getGeneratedImageSize(src);
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      width={size.naturalWidth}
+      height={size.naturalHeight}
+      loading="lazy"
+      decoding="async"
+      style={style}
+    />
+  );
+}
 
 export function WireframeCompletion() {
   return (
@@ -17,6 +40,7 @@ export function WireframeCompletion() {
             <div
               key={block.id}
               className={`wire-block wire-block--${block.tone ?? 'mid'} orbit-showcase__block`}
+              aria-hidden="true"
               style={{
                 left: `${block.left}%`,
                 top: `${block.top}%`,
@@ -28,12 +52,12 @@ export function WireframeCompletion() {
           ))}
           <div className="orbit-showcase__center">
             <h2>CREATIVE AI</h2>
-            <span />
+            <span aria-hidden="true" />
           </div>
         </div>
       </section>
 
-      <section className="tone-divider" aria-label="Section divider" />
+      <div className="tone-divider" aria-hidden="true" />
 
       <section className="recent-works" aria-label="Recent works">
         <div className="recent-works__copy">
@@ -61,6 +85,7 @@ export function WireframeCompletion() {
           <span
             key={block.id}
             className={`wire-block wire-block--${block.tone ?? 'mid'} manifesto-field__block`}
+            aria-hidden="true"
             style={{
               left: `${block.left}%`,
               top: `${block.top}%`,
@@ -81,7 +106,7 @@ export function WireframeCompletion() {
       <section className="archive-grid" aria-label="Visual archive grid">
         <div className="archive-grid__inner">
           {archiveBlocks.map((block) => (
-            <img key={block.id} src={block.src} alt={block.alt} loading="lazy" decoding="async" />
+            block.src && block.alt ? <AssetImage key={block.id} src={block.src} alt={block.alt} /> : null
           ))}
         </div>
       </section>
@@ -98,19 +123,19 @@ export function WireframeCompletion() {
         </div>
         <div className="split-feature__media">
           {splitBlocks.map((block) => (
-            <img
-              key={block.id}
-              src={block.src}
-              alt={block.alt}
-              loading="lazy"
-              decoding="async"
-              style={{
-                left: `${block.left}%`,
-                top: `${block.top}%`,
-                width: `${block.width}%`,
-                height: `${block.height}%`,
-              }}
-            />
+            block.src && block.alt ? (
+              <AssetImage
+                key={block.id}
+                src={block.src}
+                alt={block.alt}
+                style={{
+                  left: `${block.left}%`,
+                  top: `${block.top}%`,
+                  width: `${block.width}%`,
+                  height: `${block.height}%`,
+                }}
+              />
+            ) : null
           ))}
         </div>
       </section>
@@ -120,9 +145,9 @@ export function WireframeCompletion() {
         <div className="creative-deck__grid">
           {creativeCards.map((card) => (
             <article key={card.id} className="creative-deck__card">
-              <img src={card.src} alt={card.alt} loading="lazy" decoding="async" />
+              <AssetImage src={card.src} alt={card.alt} />
               <div>
-                <span>{card.title}</span>
+                <span aria-hidden="true" />
               </div>
             </article>
           ))}
@@ -136,7 +161,7 @@ export function WireframeCompletion() {
         </p>
       </section>
 
-      <section className="closing-panel" aria-label="Closing panel" />
+      <div className="closing-panel" aria-hidden="true" />
     </>
   );
 }
